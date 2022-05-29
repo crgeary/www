@@ -5,3 +5,7 @@ publish = "public"
 for = "/*"
 [headers.values]
 X-X = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+X-Frame-Options = "DENY"
+X-XSS-Protection = "1; mode=block"
+X-Content-Type-Options = "nosniff"
+Referrer-Policy = "strict-origin"
