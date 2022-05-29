@@ -1,0 +1,7 @@
+[build]
+publish = "public"
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-X = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
