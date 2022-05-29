@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-gb">
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Christopher Geary</title>
     <style>
       html,
@@ -39,6 +42,11 @@
 
       svg {
         fill: currentColor;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
       }
 
       .vcard {
@@ -88,8 +96,8 @@
 
       .cookies {
         position: fixed;
-        right: 2rem;
-        bottom: 2rem;
+        right: 1rem;
+        bottom: 1rem;
       }
 
       .cookies__button {
@@ -97,6 +105,13 @@
         padding: 0;
         background-color: transparent;
         cursor: pointer;
+        transition: transform 0.2s ease-out;
+        width: 36px;
+      }
+
+      .cookies__button:hover,
+      .cookies__button:focus {
+        transform: scale(1.05);
       }
 
       .cookies__popup {
@@ -105,13 +120,15 @@
         right: 0;
         background-color: white;
         color: #3f3f46;
-        width: 20rem;
+        width: 22rem;
+        max-width: calc(100vw - 2rem);
         padding: 1rem;
         max-height: 50vh;
         border: 1px solid #eeeeee;
         flex-direction: column;
         font-size: 0.85rem;
         display: none;
+        border-radius: 4px;
       }
 
       .cookies__popup *:first-child {
@@ -170,6 +187,19 @@
         white-space: nowrap;
         border-width: 0;
       }
+
+      @media (min-width: 600px) {
+        .cookies {
+          bottom: 2rem;
+          right: 2rem;
+        }
+        .cookies__popup {
+          max-width: calc(100vw - 4rem);
+        }
+        .cookies__button {
+          width: 72px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -184,6 +214,8 @@
           assets/images/me@4x     512w
         "
         alt=""
+        width="128"
+        height="128"
       />
       <h1 class="vcard__name">Christopher Geary</h1>
       <p class="vcard__position">Fullstack Developer</p>
@@ -233,13 +265,15 @@
       >
         <img
           src="assets/images/cookie.png"
-          sizes="72px"
+          sizes="(min-width: 600px) 72px, 36px"
           srcset="
             assets/images/cookie.png     72w,
             assets/images/cookie@2x.png 144w,
             assets/images/cookie@4x.png 288w
           "
           alt=""
+          width="72"
+          height="72"
         />
         <span class="sr-only">Cookies</span>
       </button>
