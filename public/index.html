@@ -9,7 +9,7 @@
       }
 
       html {
-        background: white;
+        background: #ffffff;
         box-sizing: border-box;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -33,6 +33,14 @@
         margin-bottom: 0;
       }
 
+      a {
+        color: inherit;
+      }
+
+      svg {
+        fill: currentColor;
+      }
+
       .vcard {
         font-style: normal;
         text-align: center;
@@ -53,6 +61,7 @@
       .vcard__position {
         margin-top: 0.25rem;
         font-size: 1rem;
+        color: #3f3f46;
       }
 
       .social {
@@ -71,6 +80,83 @@
         padding: 5px;
         width: 40px;
         height: 40px;
+      }
+
+      .social__item--linkedin {
+        color: #0072b1;
+      }
+
+      .cookies {
+        position: fixed;
+        right: 2rem;
+        bottom: 2rem;
+      }
+
+      .cookies__button {
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+
+      .cookies__popup {
+        position: absolute;
+        bottom: calc(100% + 1rem);
+        right: 0;
+        background-color: white;
+        color: #3f3f46;
+        width: 20rem;
+        padding: 1rem;
+        max-height: 50vh;
+        border: 1px solid #eeeeee;
+        flex-direction: column;
+        font-size: 0.85rem;
+        display: none;
+      }
+
+      .cookies__popup *:first-child {
+        margin-top: 0;
+      }
+
+      .cookies__popup ul {
+        padding-left: 1rem;
+        overflow: auto;
+      }
+
+      .cookies__popup--open {
+        display: flex;
+      }
+
+      .cookies img {
+        display: block;
+      }
+
+      .cookies__endorse {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .button {
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        line-height: 1;
+        border: 1px solid transparent;
+      }
+
+      .button--cancel {
+        color: #dc2626;
+        border-color: currentColor;
+        background-color: transparent;
+      }
+
+      .button--accept {
+        background-color: #000000;
+        color: #ffffff;
       }
 
       .sr-only {
@@ -104,7 +190,7 @@
       <div>
         <h3 class="sr-only">Social Links</h3>
         <ul class="social">
-          <li>
+          <li class="social__item social__item--linkedin">
             <a
               href="https://www.linkedin.com/in/crgeary"
               rel="noreferrer noopener"
@@ -121,7 +207,7 @@
               </svg>
             </a>
           </li>
-          <li>
+          <li class="social__item social__item--github">
             <a href="https://github.com/crgeary" rel="noreferrer noopener">
               <span class="sr-only">Github</span>
               <svg
@@ -138,5 +224,148 @@
         </ul>
       </div>
     </address>
+
+    <div class="cookies">
+      <button
+        class="cookies__button"
+        aria-expanded="false"
+        aria-controls="cookies"
+      >
+        <img
+          src="assets/images/cookie.png"
+          sizes="72px"
+          srcset="
+            assets/images/cookie.png     72w,
+            assets/images/cookie@2x.png 144w,
+            assets/images/cookie@4x.png 288w
+          "
+          alt=""
+        />
+        <span class="sr-only">Cookies</span>
+      </button>
+
+      <div class="cookies__popup" id="cookies">
+        <p>
+          By using this site, you endorse the consumption of the following
+          cookies.
+        </p>
+        <ul>
+          <li>Alfajor</li>
+          <li>Angel Wings (Chruściki)</li>
+          <li>Animal cracker</li>
+          <li>Anzac biscuit</li>
+          <li>Berger cookie</li>
+          <li>Berner Haselnusslebkuchen</li>
+          <li>Biscotti</li>
+          <li>Biscuit rose de Reims</li>
+          <li>Black and white cookie</li>
+          <li>Blondie</li>
+          <li>Bourbon biscuit</li>
+          <li>Brownie</li>
+          <li>Butter cookie</li>
+          <li>Chocolate chip cookie</li>
+          <li>Chocolate-coated marshmallow treat</li>
+          <li>Congo bar</li>
+          <li>Digestive biscuit</li>
+          <li>Fat rascal</li>
+          <li>Fattigmann</li>
+          <li>Flies graveyard</li>
+          <li>Florentine biscuit</li>
+          <li>Fortune cookie</li>
+          <li>Fruit squares and bars (date, fig, lemon, raspberry, etc.)</li>
+          <li>Ginger snap</li>
+          <li>Gingerbread house</li>
+          <li>Gingerbread man</li>
+          <li>Graham cracker</li>
+          <li>Hamentashen</li>
+          <li>Hobnob biscuit</li>
+          <li>Joe Frogger</li>
+          <li>Jumble</li>
+          <li>Kifli</li>
+          <li>Koulourakia</li>
+          <li>Krumkake</li>
+          <li>Linzer cookie</li>
+          <li>Macaroon</li>
+          <li>Meringue</li>
+          <li>Nice biscuit</li>
+          <li>Oatmeal raisin cookie</li>
+          <li>Pastelito</li>
+          <li>Peanut butter blossom cookie</li>
+          <li>Peanut butter cookie</li>
+          <li>Pepparkakor</li>
+          <li>Pfeffernüsse</li>
+          <li>Pizzelle</li>
+          <li>Polvorón</li>
+          <li>Qurabiya</li>
+          <li>Rainbow cookie</li>
+          <li>Ranger Cookie</li>
+          <li>Rich tea</li>
+          <li>Riposteria</li>
+          <li>Rosette</li>
+          <li>Rum ball</li>
+          <li>Rusk</li>
+          <li>Russian tea cake</li>
+          <li>Rock cake</li>
+          <li>Sablé</li>
+          <li>Sandbakelse</li>
+          <li>Şekerpare</li>
+          <li>Shortbread</li>
+          <li>Snickerdoodle</li>
+          <li>Speculoos</li>
+          <li>Springerle</li>
+          <li>Spritzgebäck (Spritz)</li>
+          <li>Stroopwafel</li>
+          <li>Sugar cookie</li>
+          <li>Tea biscuit</li>
+          <li>Toruń gingerbread</li>
+          <li>Tuile</li>
+          <li>Wafer</li>
+          <li>Windmill cookie</li>
+        </ul>
+        <div class="cookies__endorse">
+          <button class="button button--cancel" aria-hidden="true">
+            Endorse
+          </button>
+          <button class="button button--accept" aria-expanded="false">
+            Endorse
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (() => {
+        const cookiesButton = document.querySelector(".cookies__button");
+        const cookiesEndorseButtons = document.querySelectorAll(
+          ".cookies__endorse button"
+        );
+        const cookiesPopup = document.getElementById(
+          cookiesButton.getAttribute("aria-controls")
+        );
+
+        const isCookiePopupOpen = () =>
+          cookiesPopup.classList.contains("cookies__popup--open");
+
+        const updateCookieButtonStatus = (status) => {
+          [cookiesButton, ...cookiesEndorseButtons].forEach((button) => {
+            if (button.getAttribute("aria-hidden") !== "true") {
+              button.setAttribute("aria-expanded", status);
+            }
+          });
+        };
+
+        [cookiesButton, ...cookiesEndorseButtons].forEach((button) => {
+          button.addEventListener("click", () => {
+            if (isCookiePopupOpen()) {
+              updateCookieButtonStatus(false);
+              cookiesPopup.classList.remove("cookies__popup--open");
+            } else {
+              updateCookieButtonStatus(true);
+              cookiesPopup.classList.add("cookies__popup--open");
+            }
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
