@@ -9,3 +9,47 @@ X-Frame-Options = "DENY"
 X-XSS-Protection = "1; mode=block"
 X-Content-Type-Options = "nosniff"
 Referrer-Policy = "strict-origin"
+
+# Sensible redirects...
+
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301
+
+[[redirects]]
+from = "/index.xml"
+to = "/"
+status = 301
+
+# Redirects for the script kiddies...
+
+[[redirects]]
+from = "/wp-login.php"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
+
+[[redirects]]
+from = "/wp-login.php"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
+
+[[redirects]]
+from = "/xmlrpc.php"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
+
+[[redirects]]
+from = "/wp/*"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
+
+[[redirects]]
+from = "/wordpress/*"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
+
+[[redirects]]
+from = "/.env"
+to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+status = 303
