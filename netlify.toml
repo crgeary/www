@@ -30,7 +30,7 @@ to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 status = 303
 
 [[redirects]]
-from = "/wp-login.php"
+from = "/wp-admin/*"
 to = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 status = 303
 
